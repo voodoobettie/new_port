@@ -18,3 +18,4 @@
 
 #probably should have done this earlier but too late now
 /config/secrets.yml
+tmp/pids/server.pid
