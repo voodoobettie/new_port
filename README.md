@@ -22,3 +22,4 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+If it ain't broke, it doesn't have enough features -- _Douglas Adams_
