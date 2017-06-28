@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Josefin+Sans|Poiret+One');
+
+* {
+
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Poiret One', cursive;
+
+}
