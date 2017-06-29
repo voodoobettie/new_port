@@ -1638,3 +1638,135 @@ Processing by PortfoliosController#index as HTML
 Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/portfolios" for 127.0.0.1 at 2017-06-28 18:03:54 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 220ms (Views: 205.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/portfolios/new" for 127.0.0.1 at 2017-06-28 18:04:00 -0700
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 46ms (Views: 44.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2017-06-28 18:05:15 -0700
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/portfolios/new" for 127.0.0.1 at 2017-06-28 18:05:19 -0700
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2017-06-28 18:08:45 -0700
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"portfolios"} missing required keys: [:id]):
+     5:   <h3><%= port.subtitle %></h3>
+     6:   <p><%= port.body %></p>
+     7:   <%= image_tag port.thumb_image unless port.thumb_image.nil? %>
+     8:   <%= link_to "Edit", edit_portfolio_path %>
+     9:   <% end %>
+    10: 
+    11: <%= link_to "Add a portfolio item", new_portfolio_path %>
+  
+app/views/portfolios/index.html.erb:8:in `block in _app_views_portfolios_index_html_erb__2466885607951867789_70244001465720'
+app/views/portfolios/index.html.erb:3:in `_app_views_portfolios_index_html_erb__2466885607951867789_70244001465720'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.9ms)
+Started GET "/portfolios" for 127.0.0.1 at 2017-06-28 18:11:25 -0700
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     5:   <h3><%= port.subtitle %></h3>
+     6:   <p><%= port.body %></p>
+     7:   <%= image_tag port.thumb_image unless port.thumb_image.nil? %>
+     8:   <%= link_to "Edit", edit_portfolio_path(@port.id) %>
+     9:   <% end %>
+    10: 
+    11: <%= link_to "Add a portfolio item", new_portfolio_path %>
+  
+app/views/portfolios/index.html.erb:8:in `block in _app_views_portfolios_index_html_erb__2466885607951867789_70243997620060'
+app/views/portfolios/index.html.erb:3:in `_app_views_portfolios_index_html_erb__2466885607951867789_70243997620060'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.5ms)
+Started GET "/portfolios" for 127.0.0.1 at 2017-06-28 18:11:36 -0700
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/portfolios/1/edit" for 127.0.0.1 at 2017-06-28 18:11:39 -0700
+Processing by PortfoliosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering portfolios/edit.html.erb within layouts/application
+  Rendered portfolios/edit.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 42ms (Views: 35.6ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/portfolios/1" for 127.0.0.1 at 2017-06-28 18:11:41 -0700
+Processing by PortfoliosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0OQ0Vf90rbtCa8MfNQq8XLDVTh9cDcFzzGY/bLHw0aEFS6jB/zZcVSLFRTPWzGkuRinkLtrzTmqBZ6XX6aHFOQ==", "portfolio"=>{"title"=>"Portfolio item 0", "subtitle"=>"Created for xyz", "body"=>" Seska: I won't play these games with the trick of light.  The Doctor: Sticks and stones won't break my bones, so you can imagine how I feel about being called names.\r\n Tom Paris: Well, Harry and I wanted to explore the station. We wanted to broaden our understanding of alien cultures and...  Captain Janeway: Skip the recruiting speech, you were looking for a bar.\r\n The Doctor: Seven of Nine, how's my favorite Borg today?  Seven of Nine: Annoyed.\r\n Lieutenant Worf: Nepo!  Capt. Picard: This is mutiny!\r\n [In reference to the Qomar]  Tuvok: They are interfering with normal ship business.  Captain Janeway: Since when has business on this ship ever been normal?\r\n"}, "commit"=>"Update Portfolio", "id"=>"1"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "portfolios" SET "body" = $1, "updated_at" = $2 WHERE "portfolios"."id" = $3[0m  [["body", " Seska: I won't play these games with the trick of light.  The Doctor: Sticks and stones won't break my bones, so you can imagine how I feel about being called names.\r\n Tom Paris: Well, Harry and I wanted to explore the station. We wanted to broaden our understanding of alien cultures and...  Captain Janeway: Skip the recruiting speech, you were looking for a bar.\r\n The Doctor: Seven of Nine, how's my favorite Borg today?  Seven of Nine: Annoyed.\r\n Lieutenant Worf: Nepo!  Capt. Picard: This is mutiny!\r\n [In reference to the Qomar]  Tuvok: They are interfering with normal ship business.  Captain Janeway: Since when has business on this ship ever been normal?\r\n"], ["updated_at", "2017-06-29 01:11:41.579467"], ["id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/portfolios
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2017-06-28 18:11:41 -0700
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/portfolios/6/edit" for 127.0.0.1 at 2017-06-28 18:11:45 -0700
+Processing by PortfoliosController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering portfolios/edit.html.erb within layouts/application
+  Rendered portfolios/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.2ms)
+
+
